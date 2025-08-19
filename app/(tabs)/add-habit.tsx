@@ -80,7 +80,7 @@ export default function AddHabitScreen() {
       title: title.trim(),
       description: description.trim(),
       streak_count: 0,
-      task_completed: "false",
+      last_completed: new Date().toISOString(),
       frequency: buildFrequencyString(),
       created_at: new Date().toISOString(),
     };

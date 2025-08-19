@@ -14,7 +14,7 @@ const TabsLayout = () => {
           elevation: 0,
           shadowOpacity: 0,
         },
-        tabBarActiveTintColor: "#6200ee",
+        tabBarActiveTintColor: "#f6ad55",
         tabBarInactiveTintColor: "#666666",
       }}
     >

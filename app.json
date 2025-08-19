@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "habit-tracker",
+    "name": "Habit Streaks",
     "slug": "habit-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
     "scheme": "habittracker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
@@ -21,14 +21,14 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -37,6 +37,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c1210854-e9bc-4ad9-b2ba-aa3d4ce94beb"
+      }
     }
   }
 }

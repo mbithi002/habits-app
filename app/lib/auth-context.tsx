@@ -66,7 +66,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       await account.deleteSession("current");
       setUser(null);
     } catch (error) {
-      console.log(error);
+      ''
     }
   };
 
