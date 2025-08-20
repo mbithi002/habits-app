@@ -4,7 +4,7 @@
     "slug": "habit-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
+    "icon": "./assets/images/habit-tracker-logo.png",
     "scheme": "habittracker",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,22 +13,23 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
+        "foregroundImage": "./assets/images/habit-tracker-logo.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.luckymbithi.habittracker"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg"
+      "favicon": "./assets/images/habit-tracker-logo.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "https://i.pinimg.com/1200x/85/8e/9d/858e9de4c59f5aff6448a3c5695d0dc7.jpg",
+          "image": "./assets/images/habit-tracker-logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -39,6 +40,12 @@
       "typedRoutes": true
     },
     "extra": {
+      "EXPO_PUBLIC_APPWRITE_ENDPOINT": "https://fra.cloud.appwrite.io/v1",
+      "EXPO_PUBLIC_APPWRITE_PROJECT_ID": "68a2f708000f3165e2e8",
+      "EXPO_PUBLIC_APPWRITE_PLATFORM": "com.lucky.habittracker",
+      "EXPO_PUBLIC_APPWRITE_DATABASE_ID": "68a31fb20032f6baf1f2",
+      "EXPO_PUBLIC_APPWRITE_HABITS_COLLECTION_ID": "68a31ff90014f13c6d6f",
+      "EXPO_PUBLIC_APPWRITE_COMPLETIONS_COLLECTION_ID": "68a45ad800383027abe2",
       "router": {},
       "eas": {
         "projectId": "c1210854-e9bc-4ad9-b2ba-aa3d4ce94beb"

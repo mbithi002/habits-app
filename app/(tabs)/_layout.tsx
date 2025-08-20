@@ -63,6 +63,21 @@ const TabsLayout = () => {
           },
         }}
       />
+      <Tabs.Screen
+        name="author"
+        options={{
+          title: "Author",
+          tabBarIcon: ({ color, focused }) => {
+            return (
+              <MaterialCommunityIcons
+                name="account-outline"
+                size={24}
+                color={focused ? color : "black"}
+              />
+            );
+          },
+        }}
+      />
     </Tabs>
   );
 };

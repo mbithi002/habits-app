@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PaperProvider } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { AuthProvider, useAuth } from "./lib/auth-context";
 
 function RouteGuard({ children }: { children: React.ReactNode }) {
@@ -30,14 +31,19 @@ export default function RootLayout() {
     <GestureHandlerRootView>
       <AuthProvider>
         <PaperProvider>
-          <SafeAreaProvider>
-            <RouteGuard>
-              <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-                <Stack.Screen name="Auth" options={{ headerShown: false }} />
-              </Stack>
-            </RouteGuard>
-          </SafeAreaProvider>
+          <ErrorBoundary>
+            <SafeAreaProvider>
+              <RouteGuard>
+                <Stack>
+                  <Stack.Screen
+                    name="(tabs)"
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen name="Auth" options={{ headerShown: false }} />
+                </Stack>
+              </RouteGuard>
+            </SafeAreaProvider>
+          </ErrorBoundary>
         </PaperProvider>
       </AuthProvider>
     </GestureHandlerRootView>

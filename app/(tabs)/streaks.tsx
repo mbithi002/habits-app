@@ -75,7 +75,7 @@ const StreaksScreen = () => {
       const habitsRes = await database.listDocuments(
         DATABASE_ID,
         HABITS_COLLECTION_ID,
-        [Query.equal("user_id", (user as any)?.$id ?? (user as any)?.id ?? "")]
+        [Query.equal("user_id", (user as any)?.$id)]
       );
 
       // Fetch recent completions (cap at 500 for perf; expand if you need)
@@ -83,7 +83,7 @@ const StreaksScreen = () => {
         DATABASE_ID,
         COMPLETIONS_COLLECTION_ID,
         [
-          Query.equal("user_id", (user as any)?.$id ?? (user as any)?.id ?? ""),
+          Query.equal("user_id", (user as any)?.$id),
           Query.orderDesc("$createdAt"),
           Query.limit(500),
         ]

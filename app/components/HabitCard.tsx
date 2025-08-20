@@ -120,7 +120,7 @@ function HabitCardInner({ habit, index = 0, onPress }: Props) {
         HABITS_COLLECTION_ID,
         habit.$id,
         {
-          streak_count: decision.nextStreak,
+          streak_count: habit.streak_count + 1,
           last_completed: timeNowISO,
         }
       );
